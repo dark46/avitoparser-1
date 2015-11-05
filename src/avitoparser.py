@@ -55,7 +55,7 @@ class Avito:
         print(self.ps4.cat)
         print(self.ps4.keyword)    
     
-    def getPhone(url):
+    def getPhone(self,url):
         headers = {'User-Agent': 'Mozilla/5.0 (Windows; U; Windows NT 5.1; ru; rv:1.9.0.13) Gecko/2009073022 Firefox/3.0.13'}
         session = requests.session()
         resp = session.get(url, headers=headers)
