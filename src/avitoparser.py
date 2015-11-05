@@ -25,12 +25,14 @@ class AvitoDB:
         with con:    
             cur = con.cursor()    
             cur.execute(self.sqlInsert, data)
+            commit()
             
     def find(self, id):
         con = sqlite3.connect(self.dbname)
         with con:    
             cur = con.cursor()    
             cur.execute(self.sqlSelect, id)
+            commit()
         data = cur.fetchall()
         if len(data) == 0:
             return False
